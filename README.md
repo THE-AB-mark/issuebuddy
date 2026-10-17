@@ -1,5 +1,7 @@
 # 🧭 IssueBuddy: find your first PR in 60 seconds
 
+**🔗 Live demo: [issuebuddy-hackday.vercel.app](https://issuebuddy-hackday.vercel.app)**
+
 Hacktoberfest is here, but beginners spend hours searching for an issue they can actually solve.
 **IssueBuddy** asks for your skills and a GitHub repo, pulls its beginner-friendly issues, uses **open-weight AI** to rank them by how well they fit *you*, and then writes a step-by-step contribution plan with a ready-to-paste commit message and PR description.
 
