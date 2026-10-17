@@ -47,7 +47,6 @@ GEMINI_API_KEY=your_key node server.js   # http://localhost:3000  (free key: htt
 
 ## 👥 Team
 - **Abhi** ([@THE-AB-mark](https://github.com/THE-AB-mark)), team leader
-- **Ayush Yadav** ([@ayush8620](https://github.com/ayush8620))
 - **Kriti Kumari**
 
 ## 🤝 Contributing
