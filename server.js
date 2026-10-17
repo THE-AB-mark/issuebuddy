@@ -1,4 +1,4 @@
-// Local dev server: serves static files + api/*.js (mimics Vercel). Usage: GROQ_API_KEY=... node server.js
+// Local dev server: serves static files + api/*.js (mimics Vercel). Usage: GEMINI_API_KEY=... node server.js
 const http = require("http"), fs = require("fs"), path = require("path");
 const PORT = process.env.PORT || 3000;
 const types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".png": "image/png", ".svg": "image/svg+xml" };

@@ -4,7 +4,7 @@ Thanks for helping beginners find their first PR! 🎉
 
 1. Comment on an issue to get it assigned to you.
 2. Fork the repo, then `git checkout -b feat/short-name`.
-3. Run `GROQ_API_KEY=... node server.js` and test at http://localhost:3000.
+3. Run `GEMINI_API_KEY=... node server.js` and test at http://localhost:3000.
 4. Use [Conventional Commits](https://www.conventionalcommits.org) (`feat:`, `fix:`, `docs:`).
 5. Open a PR that describes what changed, includes a screenshot for UI changes, and says `Fixes #N`.
 
