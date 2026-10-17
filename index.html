@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IssueBuddy · Find your first PR in 60 seconds</title>
+<meta name="description" content="Pick your skills, paste a GitHub repo, and get AI-ranked beginner issues with a step-by-step contribution plan.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="brand">🧭 IssueBuddy</div>
+  <h1>Find your first PR in <span class="grad">60 seconds</span></h1>
+  <p class="sub">Pick your skills, paste a GitHub repo, and let open-weight AI rank beginner-friendly issues and plan your contribution.</p>
+</header>
+<main>
+  <section class="card" id="form">
+    <h2><span class="num">1</span> Your skills</h2>
+    <div id="chips" class="chips"></div>
+    <h2><span class="num">2</span> A GitHub repo</h2>
+    <div class="row">
+      <input id="repo" placeholder="https://github.com/owner/repo or owner/repo" autocomplete="off">
+      <button id="go" class="primary">Find issues →</button>
+    </div>
+    <div class="samples">Try: <span id="samples"></span></div>
+    <p id="status" class="status" role="status"></p>
+  </section>
+  <section id="results"></section>
+</main>
+<footer>Built at MLH Hacktoberfest Hack Day Prayagraj × WikiClub Tech UIT · AI by <code>gpt-oss-20b</code> (Apache-2.0) on Groq · Issues via GitHub public API</footer>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="sheet"><button class="close" id="close" aria-label="Close">×</button><div id="modalBody"></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>
