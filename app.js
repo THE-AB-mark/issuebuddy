@@ -34,11 +34,20 @@ async function gh(path) {
   if (!r.ok) throw new Error(`GitHub error ${r.status}`);
   return r.json();
 }
-async function api(path, body) {
-  const r = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(j.error || `Server error ${r.status}`);
-  return j;
+async function api(path, body, tries = 3) {
+  for (let a = 1; ; a++) {
+    let r;
+    try {
+      r = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    } catch (e) {
+      if (a < tries) { await new Promise((ok) => setTimeout(ok, 1500 * a)); continue; }
+      throw new Error("Network hiccup reaching the AI server. Please check your connection and try again.");
+    }
+    const j = await r.json().catch(() => ({}));
+    if (r.ok) return j;
+    if (r.status >= 500 && r.status !== 501 && a < tries) { await new Promise((ok) => setTimeout(ok, 1500 * a)); continue; }
+    throw new Error(j.error || (r.status === 504 ? "Gemma took too long to answer. Please try again." : `Server error ${r.status}`));
+  }
 }
 
 async function find() {
