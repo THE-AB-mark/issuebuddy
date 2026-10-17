@@ -35,6 +35,7 @@ GROQ_API_KEY=your_key node server.js   # http://localhost:3000
 ## 👥 Team
 - **Abhi** ([@THE-AB-mark](https://github.com/THE-AB-mark)), team leader
 - **Ayush Yadav** ([@ayush8620](https://github.com/ayush8620))
+- **Kriti Kumari**
 
 ## 🤝 Contributing
 We're a Hacktoberfest project too! See [CONTRIBUTING.md](CONTRIBUTING.md) for good first issues.
